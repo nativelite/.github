@@ -2,11 +2,11 @@
 
 **Attack surface reduction through native tools and zero dependencies.**
 
-Nativelite builds lightweight, focused libraries that eliminate unnecessary complexity by calling the operating system and standard library directly—never vendoring a supply chain.
+Nativelite builds lightweight, focused libraries that eliminate unnecessary complexity by calling the operating system and standard library as a standard or expanding for specifics rather than broad.
 
 ## Philosophy
 
-Every nativelite package starts with the same premise: **the OS is already a dependency you trust.** Rather than pulling in a crate/package ecosystem to handle a narrow concern, we call the platform directly through safe, minimal interfaces.
+Every nativelite package starts with the same premise: **the OS is already a dependency you trust.** Rather than pulling in a crate/package ecosystem to handle a narrow concern with a wide net, we call the platform directly through safe, minimal interfaces.
 
 See [nativelite-philosophy](https://github.com/nativelite/nativelite-philosophy) for the full charter, engineering standards, and design principles.
 
@@ -47,14 +47,13 @@ See [nativelite-philosophy](https://github.com/nativelite/nativelite-philosophy)
 
 - **[fp-js](https://github.com/nativelite/fp-js)** — Browser fingerprinting (anti-bloat)
 - **[fp-py](https://github.com/nativelite/fp-py)** — Browser fingerprinting (anti-bloat)
-- **[web-server-rs](https://github.com/nativelite/web-server-rs)** — Lightweight webserver (zero external libraries)
-- **[web-server-py](https://github.com/nativelite/web-server-py)** — Lightweight webserver (zero external libraries)
-- **[ops](https://github.com/nativelite/ops)** — Operations HQ: CTO charter, standards, playbooks
+- **[web-server-rs](https://github.com/nativelite/web-server-rs)** — Lightweight webserver (zero external libraries) - coming soon
+- **[web-server-py](https://github.com/nativelite/web-server-py)** — Lightweight webserver (zero external libraries) - coming soon
 - **[agsess](https://github.com/nativelite/agsess)** — Agent session management
 
 ## Key principles
 
-1. **Zero dependencies** — only std lib + OS APIs (via safe FFI when needed)
+1. **Zero dependencies** — only std lib + OS APIs (via safe FFI when needed)  - the only caveat is if you plan to create an MVP -> Zero Deps based
 2. **Attack surface by design** — every package is narrowly scoped; no feature creep
 3. **Spec-anchored correctness** — tests anchor to specs (RFC 8259, RFC 6238, WHATWG), not just round-trips
 4. **Cross-language mirrors** — same logic implemented in Rust, Python, JavaScript with byte-identical output

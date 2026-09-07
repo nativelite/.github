@@ -36,46 +36,44 @@ the technology away.
 
 ## Packages
 
-### IDs and time
+### Available now
 
-- **[uid-rs](https://github.com/nativelite/uid-rs)**: ULID + UUIDv7 on Rust std
-- **[uid-py](https://github.com/nativelite/uid-py)**: ULID + UUIDv7 on Python std
-- **[uid-js](https://github.com/nativelite/uid-js)**: ULID + UUIDv7 on Node std
-- **[duration](https://github.com/nativelite/duration)**: parse and format human durations to and from milliseconds
+The **atrium** suite is live on [crates.io](https://crates.io/crates/atrium): the
+flagship terminal plus the ten zero-dependency crates it is built from, each
+usable on its own. All Rust, standard library only. Install with
+`cargo install atrium` for the app, or `cargo add <crate>` for a library.
 
-### Parsing and data
+| Crate | What it does |
+| --- | --- |
+| **[atrium](https://github.com/nativelite/atrium)** | tmux for coding agents: a multi-agent terminal |
+| **[nativelite-abus](https://github.com/nativelite/abus)** | a coordination board and pub/sub bus for agent teams |
+| **[nativelite-agsess](https://github.com/nativelite/agsess)** | local agent session state, read from coding-agent transcripts |
+| **[nativelite-akey](https://github.com/nativelite/akey)** | API keys and Workload Identity Federation profiles for agent tooling |
+| **[nativelite-ansi](https://github.com/nativelite/ansi-rs)** | ANSI/VT terminal output as data |
+| **[nativelite-cred](https://github.com/nativelite/cred-rs)** | named secrets in the OS credential vault |
+| **[nativelite-json](https://github.com/nativelite/json-rs)** | RFC 8259 JSON parser and serializer |
+| **[nativelite-pty](https://github.com/nativelite/pty-rs)** | spawn a child on a real pseudo-terminal |
+| **[nativelite-rawterm](https://github.com/nativelite/rawterm-rs)** | raw terminal mode and key/resize events via OS FFI |
+| **[nativelite-uid](https://github.com/nativelite/uid-rs)** | time-sortable IDs (ULID + UUIDv7) |
+| **[nativelite-vterm](https://github.com/nativelite/vterm-rs)** | a minimal terminal-emulator core |
 
-- **[json-rs](https://github.com/nativelite/json-rs)**: RFC 8259 JSON parser and serializer (Rust std only)
-- **[jsonheal-py](https://github.com/nativelite/jsonheal-py)**: repair almost-JSON text into valid JSON (Python std only)
-- **[toml-rs](https://github.com/nativelite/toml-rs)**: TOML 1.0.0 parser (Rust std only)
-- **[sse-py](https://github.com/nativelite/sse-py)**: Server-Sent Events parser (Python std only)
-- **[patch-py](https://github.com/nativelite/patch-py)**: apply and produce unified diffs (Python std only)
+### In progress
 
-### Terminal, TUI, and agents
+More packages, held to the same zero-dependency bar, not yet released:
 
-- **[ansi-rs](https://github.com/nativelite/ansi-rs)**: ANSI/VT terminal output as data (Rust std only)
-- **[rawterm-rs](https://github.com/nativelite/rawterm-rs)**: raw terminal mode and key/resize events via OS FFI (Rust std only)
-- **[pty-rs](https://github.com/nativelite/pty-rs)**: spawn a child on a real pseudo-terminal (Rust std only)
-- **[vterm-rs](https://github.com/nativelite/vterm-rs)**: a minimal terminal-emulator core (Rust std only)
-- **[uwidth](https://github.com/nativelite/uwidth)**: grapheme-correct terminal text measurement (UAX #29 + #11)
-- **[agsess](https://github.com/nativelite/agsess)**: local agent session state, read from coding-agent transcripts
-- **[agtop](https://github.com/nativelite/agtop)**: htop for coding agents, a live terminal monitor
-- **[atrium](https://github.com/nativelite/atrium)**: tmux for coding agents, a multi-agent terminal
-
-### Security and secrets
-
-- **[pwhash-py](https://github.com/nativelite/pwhash-py)**: password hashing (scrypt, Python std only)
-- **[otp-py](https://github.com/nativelite/otp-py)**: TOTP / HOTP one-time passwords (Python std only)
-- **[jwt-hs-py](https://github.com/nativelite/jwt-hs-py)**: HMAC-signed JWTs (Python std only)
-- **[cred-rs](https://github.com/nativelite/cred-rs)**: named secrets in the OS credential vault (Rust std + FFI)
-- **[akey](https://github.com/nativelite/akey)**: API keys and Workload Identity Federation profiles for agent tooling
-
-### Web and other
-
-- **[fp-js](https://github.com/nativelite/fp-js)**: lightweight browser fingerprinting
-- **[fp-py](https://github.com/nativelite/fp-py)**: lightweight device fingerprinting
-- **[web-server-rs](https://github.com/nativelite/web-server-rs)**: a lightweight web server, zero external libraries (coming soon)
-- **[web-server-py](https://github.com/nativelite/web-server-py)**: a lightweight web server, zero external libraries (coming soon)
+- **duration** (Rust): parse and format human durations
+- **uwidth** (Rust): grapheme-correct terminal text measurement (UAX #29 + #11)
+- **toml-rs** (Rust): TOML 1.0.0 parser
+- **uid-py** and **uid-js**: ULID + UUIDv7 for Python and Node
+- **jsonheal-py**: repair almost-JSON text into valid JSON
+- **sse-py**: Server-Sent Events parser
+- **patch-py**: apply and produce unified diffs
+- **pwhash-py**: password hashing (scrypt)
+- **otp-py**: TOTP / HOTP one-time passwords
+- **jwt-hs-py**: HMAC-signed JWTs
+- **agtop** (Rust): htop for coding agents, a live terminal monitor
+- **fp-py** and **fp-js**: lightweight fingerprinting
+- **web-server-rs** and **web-server-py**: a lightweight, zero-dependency web server
 
 ## How every package is built
 

@@ -23,8 +23,10 @@ the technology away.
 ## The non-negotiables
 
 1. **Zero third-party runtime dependencies.** Standard library and OS APIs (via
-   safe FFI when needed), nothing else. A dependency guard enforces it in every
-   package.
+   safe FFI when needed), nothing else. Some tools and applications built on
+   nativelite are composed of several nativelite packages, which are themselves
+   standard-library only, so the whole dependency tree stays free of third-party
+   code. A dependency guard enforces this in every package.
 2. **One concern per package.** A package does exactly one thing well. If it grows
    a second concern, that concern becomes its own package.
 3. **Correctness first, then performance, then ergonomics**, in that order. A fast
